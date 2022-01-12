@@ -1,3 +1,10 @@
 node_modules/
 .cache/
 public
+
+#VScode
+.vscode
+
+# dotenv environment variable files
+.env*
+
