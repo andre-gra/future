@@ -1,8 +1,8 @@
 {
-  "name": "storyblock-boilerplate",
+  "name": "storyblok-boilerplate",
   "version": "1.0.0",
   "private": true,
-  "description": "A boilerplate to build site from Storyblock and Tailwind ready to use",
+  "description": "A boilerplate to build site from Storyblok and Tailwind ready to use",
   "author": "andregra",
   "keywords": [
     "gatsby",
