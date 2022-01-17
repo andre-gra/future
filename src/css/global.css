@@ -9,11 +9,95 @@
   }
 }
 
+body {
+  overflow: overlay;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Elsie:wght@900&family=Maitree&display=swap');
 
-.texture {
+#gatsby-focus-wrapper {
+  position: relative;
+}
+
+#gatsby-focus-wrapper::before {
+  content: "";
   background-image: url("../images/vintage-texture.png");
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  opacity: 0.1;
+  z-index: -2;
+}
+
+#gatsby-focus-wrapper::after {
+  content: "";
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  opacity: 0.25;
+  z-index: -1;
+  @apply bg-gradient-to-r from-one to-three
+}
+
+.space-icon {
+  left: calc(50% - 1.5em)
+}
+
+/* Icon rotation */
+.icon-0deg {
+  animation-name: rotate0;
+  animation-duration: 2s;
+}
+.icon-180deg {
+  animation-name: rotate180;
+  animation-duration: 2s;
+  transform: rotate(180deg) scale(100);
+}
+@keyframes rotate180 {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  100% {
+    transform: rotate(180deg) scale(100);
+  }
+}
+@keyframes rotate0 {
+  0% {
+    transform: rotate(180deg) scale(100);
+  }
+  100% {
+    transform: rotate(0) scale(1)
+}
+}
+.nav-wrapper-show {
+  animation-name: show-nav;
+  animation-duration: 2s;
+  opacity: 1;
+}
+.nav-wrapper-hide {
+  animation-name: hide-nav;
+  animation-duration: 2s;
+  opacity: 0;
+}
+@keyframes show-nav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide-nav {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

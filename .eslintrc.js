@@ -20,5 +20,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/prop-types': 'off',
+    'max-len': ['error', { code: 120 }],
+    'arrow-body-style': ['error', 'always'],
   },
 };

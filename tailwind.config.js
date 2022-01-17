@@ -6,7 +6,7 @@ module.exports = {
       two: '#F98B53',
       three: '#561314',
       four: '#664A3C',
-      five: '#BD4833',
+      five: '#84283b',
       six: '#905737',
       seven: '#B89076',
     },
@@ -15,9 +15,16 @@ module.exports = {
       title: ['Elsie'],
       paragraph: ['Maitree'],
     },
-    extends: {
+    extend: {
       backgroundImage: {
         'body-texture': "url('src/images/vintage-texture.png')",
+      },
+      gridTemplateRows: {
+        8: 'repeat(8, minmax(0, 1fr))',
+        layout: '50px 100px 100px minmax(500px, 1fr) 50px',
+      },
+      fontSize: {
+        p: ['18px', '1.5'],
       },
     },
   },
