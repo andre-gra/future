@@ -17,6 +17,7 @@ body {
 
 #gatsby-focus-wrapper {
   position: relative;
+  min-height: 100vh;
 }
 
 #gatsby-focus-wrapper::before {
@@ -76,13 +77,13 @@ body {
 }
 }
 .nav-wrapper-show {
-  animation-name: show-nav;
-  animation-duration: 2s;
+  /* animation-name: show-nav;
+  animation-duration: 2s; */
   opacity: 1;
 }
 .nav-wrapper-hide {
-  animation-name: hide-nav;
-  animation-duration: 2s;
+  /* animation-name: hide-nav;
+  animation-duration: 2s; */
   opacity: 0;
 }
 @keyframes show-nav {
@@ -99,5 +100,16 @@ body {
   }
   100% {
     opacity: 0;
+  }
+}
+
+/* galaxy animation */
+.galaxy-image {
+  animation: gala 5s infinite alternate ease-in-out -7.5s;
+  transform: rotateY(10deg) rotateX(10deg) rotateZ(2deg);
+}
+@keyframes gala {
+  100% {
+    transform: rotateY(-10deg) rotateX(-10deg);
   }
 }

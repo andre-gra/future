@@ -21,10 +21,16 @@ module.exports = {
       },
       gridTemplateRows: {
         8: 'repeat(8, minmax(0, 1fr))',
-        layout: '50px 100px 100px minmax(500px, 1fr) 50px',
+        layout: '50px 100px 100px minmax(150px, 0.3fr) minmax(350px, 0.7fr) 50px',
       },
       fontSize: {
         p: ['18px', '1.5'],
+      },
+      animation: {
+        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;',
+      },
+      screens: {
+        '-lg': { max: '1023px' },
       },
     },
   },
