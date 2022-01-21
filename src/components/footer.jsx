@@ -5,7 +5,7 @@ export default function Footer({ textAttributionWikipedia }) {
     <footer className="bg-three w-full sticky top-[100vh] mt-10 py-1 text-center text-seven">
       <div className="text-base">
         A concept by
-        <a href="https://andreagraglia.gatsbyjs.io/" className="text-two">Andrea Graglia</a>
+        <a href="https://andreagraglia.gatsbyjs.io/" className="text-two">&nbsp;Andrea Graglia</a>
       </div>
       <div className="text-xs">
         This article uses material from the Wikipedia article
