@@ -8,7 +8,7 @@ export default function Navbar({
   showMenu, rotateClass, toggleButton, galaxies,
 }) {
   return (
-    <nav className="text-two font-title text-xl">
+    <nav className="text-two font-title text-xl" style={{ webkitTapHighlightColor: "transparent" }}>
       {showMenu
         ? (
           <ul className={`${showMenu ? "nav-wrapper-show" : "nav-wrapper-hide"} absolute z-10 top-0 w-full h-screen bg-two text-three flex flex-col justify-center text-4xl lg:text-6xl leading-relaxed lg:leading-relaxed`}>

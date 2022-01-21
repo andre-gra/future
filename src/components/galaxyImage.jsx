@@ -61,7 +61,9 @@ function Galaxy({
                     onClick={() => { setTextSelection(index); }}
                     type="button"
                     className={`animate-ping-slow absolute inline-flex h-5 w-5 rounded-full bg-two opacity-75`}
-                    style={{ top: `${pos}%`, left: `${coordY.split(',')[index]}%`, animationDelay: `${late}ms` }}
+                    style={{
+                      top: `${pos}%`, left: `${coordY.split(',')[index]}%`, animationDelay: `${late}ms`, webkitTapHighlightColor: "transparent",
+                    }}
                   />
                 );
               })
