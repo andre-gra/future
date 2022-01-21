@@ -105,7 +105,7 @@ body {
 
 /* galaxy animation */
 .galaxy-image {
-  animation: gala 5s infinite alternate ease-in-out -7.5s;
+  animation: gala 5s infinite alternate ease-in-out;
   transform: rotateY(10deg) rotateX(10deg) rotateZ(2deg);
 }
 @keyframes gala {

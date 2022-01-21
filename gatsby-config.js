@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -22,13 +23,22 @@ module.exports = {
       __key: 'images',
     },
     {
-      resolve: 'gatsby-source-storyblok',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        accessToken: process.env.STORYBLOK_PREVIEW_TOKEN,
-        version: 'draft',
-        /* languages: ['de', 'at'] // Optional parameter.
-        Omission will retrieve all languages by default. */
+        name: 'data',
+        path: './src/data/',
       },
+      __key: 'data',
     },
+    // storyblock Plugin
+    // {
+    //   resolve: 'gatsby-source-storyblok',
+    //   options: {
+    //     accessToken: process.env.STORYBLOK_PREVIEW_TOKEN,
+    //     version: 'draft',
+    //     /* languages: ['de', 'at'] // Optional parameter.
+    //     Omission will retrieve all languages by default. */
+    //   },
+    // },
   ],
 };

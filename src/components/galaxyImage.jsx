@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+/* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useRef, useEffect } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -41,6 +43,8 @@ function Galaxy({
     setWrapperPosX(wrapperPos.current.offsetLeft);
   });
 
+  let late = 0;
+
   return (
     data.allFile.edges.map((image) => {
       return (
@@ -48,15 +52,16 @@ function Galaxy({
         <div key={image.node.relativePath} ref={wrapperPos} className={className}>
           <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} alt={alt} />
             {
-              coordX.map((pos, index) => {
+              coordX.split(',').map((pos, index) => {
+                late += 250;
                 return (
                   <button
                     key={pos}
                     ref={textSelection === index ? elPos : null}
                     onClick={() => { setTextSelection(index); }}
                     type="button"
-                    className="animate-ping-slow absolute inline-flex h-5 w-5 rounded-full bg-two opacity-75"
-                    style={{ top: `${pos}%`, left: `${coordY[index]}%` }}
+                    className={`animate-ping-slow absolute inline-flex h-5 w-5 rounded-full bg-two opacity-75`}
+                    style={{ top: `${pos}%`, left: `${coordY.split(',')[index]}%`, animationDelay: `${late}ms` }}
                   />
                 );
               })

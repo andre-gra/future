@@ -1,10 +1,11 @@
+/* eslint-disable no-undef */
 /* eslint-disable quotes */
 /* eslint-disable react/jsx-curly-brace-presence */
 import React from 'react';
 import SpaceshipIcon from './SpaceshipIcon';
 
 export default function Navbar({
-  showMenu, rotateClass, toggleButton,
+  showMenu, rotateClass, toggleButton, galaxies,
 }) {
   return (
     <nav className="text-two font-title text-xl">
@@ -14,12 +15,11 @@ export default function Navbar({
             <button type="button" onClick={toggleButton}>
               <SpaceshipIcon width="3em" height="3em" className="fill-two z-10 mx-auto border border-two rounded-full p-2 transform rotate-180 hover:transform hover:rotate-0" />
             </button>
-            <li>MILKY WAY</li>
-            <li>ANDROMEDA</li>
-            <li>CYGAR</li>
-            <li>FIREWORKS</li>
-            <li>MICE</li>
-            <li>SOMBRERO</li>
+            {galaxies[0].value.map((galaxy, index) => {
+              return (
+                <li onClick={(event) => { toggleButton(event.target.value); }} value={index} role="menuitem" tabIndex={index} onKeyDown={(event) => { toggleButton(event.target.value); }} className="hover:transform hover:scale-110 w-max mx-auto cursor-pointer">{galaxy.name}</li>
+              );
+            })}
           </ul>
         )
         : (
