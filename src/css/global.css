@@ -53,11 +53,11 @@ body {
 /* Icon rotation */
 .icon-0deg {
   animation-name: rotate0;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 .icon-180deg {
   animation-name: rotate180;
-  animation-duration: 2s;
+  animation-duration: 1s;
   transform: rotate(180deg) scale(100);
 }
 @keyframes rotate180 {

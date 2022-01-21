@@ -11,9 +11,9 @@ export default function Navbar({
     <nav className="text-two font-title text-xl">
       {showMenu
         ? (
-          <ul className={`${showMenu ? "nav-wrapper-show" : "nav-wrapper-hide"} absolute z-10 top-0 w-full h-screen bg-seven text-four flex flex-col justify-center text-4xl lg:text-6xl leading-relaxed lg:leading-relaxed`}>
+          <ul className={`${showMenu ? "nav-wrapper-show" : "nav-wrapper-hide"} absolute z-10 top-0 w-full h-screen bg-two text-three flex flex-col justify-center text-4xl lg:text-6xl leading-relaxed lg:leading-relaxed`}>
             <button type="button" onClick={toggleButton}>
-              <SpaceshipIcon width="3em" height="3em" className="fill-two z-10 mx-auto border border-two rounded-full p-2 transform rotate-180 hover:transform hover:rotate-0" />
+              <SpaceshipIcon width="3em" height="3em" className="fill-four z-10 mx-auto border border-four rounded-full p-2 transform rotate-180 hover:transform hover:rotate-0" />
             </button>
             {galaxies[0].value.map((galaxy, index) => {
               return (
